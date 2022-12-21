@@ -1,0 +1,294 @@
+# file contains the syntax information for
+# the entries to be put in any tnsnames.ora file
+# The entries in this file are need based.
+# There are no defaults for entries in this file
+# that Sqlnet/Net3 use that need to be overridden
+#
+# Typically you could have two tnsnames.ora files
+# in the system, one that is set for the entire system
+# and is called the system tnsnames.ora file, and a
+# second file that is used by each user locally so that
+# he can override the definitions dictated by the system
+# tnsnames.ora file.
+
+# The entries in tnsnames.ora are an alternative to using
+# the names server with the onames adapter.
+# They are a collection of aliases for the addresses that
+# the listener(s) is(are) listening for a database or
+# several databases.
+
+# The following is the general syntax for any entry in
+# a tnsnames.ora file. There could be several such entries
+# tailored to the user's needs.
+# Crear una entrada per cada gisweb_data i gisweb_req (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=
+#(PROTOCOL=TCP)(HOST=ORANORDTRANS)(PORT=1521))(ADDRESS=
+#(PROTOCOL=TCP)(HOST=ORASUDWEB)(PORT=1521))(SOURCE_ROUTE=yes)(FAILOVER=false))
+
+GISDADES=
+  (DESCRIPTION=
+    (ADDRESS_LIST=
+        (ADDRESS=
+          (PROTOCOL=TCP)
+          (Host=ORANORDTRANS.port.apb.es)
+          (Port=1521)
+        )
+    )
+    (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+    )
+  )
+
+GISWEBDATA=
+  (DESCRIPTION=
+    (ADDRESS_LIST=
+        (ADDRESS=
+          (PROTOCOL=TCP)
+          (Host=ORANORDTRANS.port.apb.es)
+          (Port=1521)
+        )
+    )
+    (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+    )
+  )
+
+GISWEBREP=
+  (DESCRIPTION=
+    (ADDRESS_LIST=
+        (ADDRESS=
+          (PROTOCOL=TCP)
+          (Host=ORANORDTRANS.port.apb.es)
+          (Port=1521)
+        )
+    )
+    (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+    )
+  )
+
+GISTEST=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                        (PROTOCOL=TCP)
+                        (HOST=ORANORDTRANS.port.apb.es)
+                        (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+        )
+  )
+
+GISBATIM=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                        (PROTOCOL=TCP)
+                        (HOST=ORANORDTRANS.port.apb.es)
+                        (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+        )
+  )
+
+GISADR=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                        (PROTOCOL=TCP)
+                        (HOST=ORANORDTRANS.port.apb.es)
+                        (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+        )
+  )
+
+
+GISADR_PRE=
+  (DESCRIPTION=(
+    ADDRESS_LIST=(
+      ADDRESS=(PROTOCOL=TCP)(HOST=ORANORDPRE.port.apb.es)(PORT=1521)
+      )
+    )
+  (CONNECT_DATA=(SERVICE_NAME=GISDATAPRE))
+)
+
+GISREAD=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                        (PROTOCOL=TCP)
+                        (HOST=ORANORDTRANS.port.apb.es)
+                        (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+        )
+  )
+
+GISHISREP=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                        (PROTOCOL=TCP)
+                        (HOST=ORANORDTRANS.port.apb.es)
+                        (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+        )
+  )
+
+SOSTRAT=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                        (PROTOCOL=TCP)
+                        (HOST=ORASUDSOS.port.apb.es)
+                        (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=SOSTRAT)
+        )
+
+  )
+
+SOSTRATP=
+  (DESCRIPTION=
+	(ADDRESS_LIST=
+		(ADDRESS=
+			(PROTOCOL=TCP)
+			(HOST=ORANORDPRE.port.apb.es)
+			(PORT=1521)
+		)
+	)
+	(CONNECT_DATA=(SERVICE_NAME=SOSTRATP)
+	)
+  )
+
+CACCESOS=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                         (PROTOCOL=TCP)
+                         (HOST=ORASUDECO.port.apb.es)
+                         (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=CACCESOS)
+        )
+  )
+
+DSS=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                        (PROTOCOL=TCP)
+                        (HOST=ORANORDDSS.port.apb.es)
+                        (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=DSS)
+        )
+  )
+
+GEOFOTOS=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                         (PROTOCOL=TCP)
+                         (HOST=ORANORDTRANS.port.apb.es)
+                         (PORT=1521)
+                )
+         )
+         (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+         )
+  )
+
+EDIFICIS=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                         (PROTOCOL=TCP)
+                         (HOST=ORANORDTRANS.port.apb.es)
+                         (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+        )
+  )
+
+ESCALES=
+  (DESCRIPTION=
+        (ADDRESS_LIST=
+                (ADDRESS=
+                         (PROTOCOL=TCP)
+                         (HOST=ORANORDTRANS.port.apb.es)
+                         (PORT=1521)
+                )
+        )
+        (CONNECT_DATA=(SERVICE_NAME=GISDATA)
+        )
+  )
+
+DSS_READ=
+   (DESCRIPTION=
+         (ADDRESS_LIST=
+                 (ADDRESS=
+                          (PROTOCOL=TCP)
+                          (HOST=ORANORDDSS.port.apb.es)
+                          (PORT=1521)
+                  )
+         )
+         (CONNECT_DATA=(SERVICE_NAME=DSS)
+         )
+   )
+VTS_READ=
+    (DESCRIPTION=
+          (ADDRESS_LIST=
+                  (ADDRESS=
+                           (PROTOCOL=TCP)
+                           (HOST=ORANORDSOS.port.apb.es)
+                           (PORT=1521)
+                  )
+          )
+          (CONNECT_DATA=(SERVICE_NAME=PMS_TAF)
+          )
+    )
+
+GISDATA=(
+  DESCRIPTION=(
+    ADDRESS_LIST=(
+      ADDRESS=(PROTOCOL=TCP)(HOST=ORANORDTRANS.port.apb.es)(PORT=1521)
+      )
+    )
+  (SOURCE_ROUTE=yes)
+  (CONNECT_DATA=(SERVICE_NAME=GISDATA))
+)
+
+GISDATAPRE=(
+  DESCRIPTION=(
+    ADDRESS_LIST=(
+      ADDRESS=(PROTOCOL=TCP)(HOST=ORANORDPRE.port.apb.es)(PORT=1521)
+      )
+    )
+  (CONNECT_DATA=(SERVICE_NAME=GISDATAPRE))
+)
+
+APPS=(
+    DESCRIPTION=(
+        ADDRESS_LIST=(
+            ADDRESS=(PROTOCOL=TCP)(HOST=ORASUDTNG.port.apb.es)(PORT=1521)
+            )
+        )
+    (SOURCE_ROUTE=yes)
+    (CONNECT_DATA=(SERVICE_NAME=APPS))
+)
+
+TEST=(
+    DESCRIPTION=(
+        ADDRESS_LIST=(
+            ADDRESS=(PROTOCOL=TCP)(HOST=ORASUDDEV.port.apb.es)(PORT=1521)
+            )
+        )
+    (CONNECT_DATA=(SERVICE_NAME=TEST))
+)
